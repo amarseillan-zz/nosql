@@ -1,8 +1,10 @@
 package ar.edu.itba.amarseillan.nosql.app;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import ar.edu.itba.amarseillan.nosql.domain.LineItem;
+import ar.edu.itba.amarseillan.nosql.domain.Order;
 import ar.edu.itba.amarseillan.nosql.domain.Part;
 
 public class DummyGenerator {
@@ -12,35 +14,35 @@ public class DummyGenerator {
 	public static LineItem genLineItem() {
 		LineItem res = new LineItem();
 		
-		res.set_id(null);
-		res.setComment("Test line item");
-		res.setCommitDate(new Date());
-		res.setDiscount(0.1);
-		res.setExtendedPrice(20);
-		res.setLineNumber(1);
-		res.setQuantity(2);
-		res.setReceiptDate(new Date());
-		res.setShipDate(new Date());
-		res.setShipInStruct("TRUE");
-		res.setShipMode("TRUCK");
-		res.setTax(0.2);
+		res._id = null;
+		res.comment = "Test line item";
+		res.commit_date = new Date();
+		res.discount = 0.1;
+		res.extended_price = 20;
+		res.line_number = 1;
+		res.quantity = 2;
+		res.receipt_date = new Date();
+		res.ship_date = new Date();
+		res.ship_in_struct = "TRUE";
+		res.ship_mode = "TRUCK";
+		res.tax = 0.2;
 		
 		switch (i%4) {
 			case 0:
-				res.setLineStatus("CAN");
-				res.setReturnFlag("R");
+				res.line_status = "CAN";
+				res.return_flag = "R";
 				break;
 			case 1:
-				res.setLineStatus("APP");
-				res.setReturnFlag("N");
+				res.line_status = "APP";
+				res.return_flag = "N";
 				break;
 			case 2:
-				res.setLineStatus("PEN");
-				res.setReturnFlag("R");
+				res.line_status = "PEN";
+				res.return_flag = "R";
 				break;
 			case 3:
-				res.setLineStatus("CAN");
-				res.setReturnFlag("N");
+				res.line_status = "CAN";
+				res.return_flag = "N";
 				break;
 		}
 		
@@ -71,5 +73,41 @@ public class DummyGenerator {
 		
 		
 		return part;
+	}
+	
+	static int key = 0;
+	
+	public static Order genOrder() {
+		Order order = new Order();
+		order.cus_address = "first st 200";
+		order.cus_key = String.valueOf(key++);
+		order.cus_mkt_segment = "high";
+		order.cus_name = "Mantin Inc";
+		order.cus_phone = "4802-2022";
+		order.nation_name = "uganda";
+		order.order_clerk = "No idea";
+		order.order_comment = "Cool order";
+		order.order_date = new Date();
+		order.order_key = String.valueOf(key++);
+		order.order_priority = "high";
+		order.order_ship_priority = 1;
+		order.order_status = "approved";
+		order.order_total_price = 800;
+		order.region_name = "africa";
+		
+		order.items = new ArrayList<LineItem>(10);
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		order.items.add(genLineItem());
+		
+		return order;
+		
 	}
 }
