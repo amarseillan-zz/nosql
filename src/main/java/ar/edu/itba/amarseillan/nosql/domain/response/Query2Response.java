@@ -1,4 +1,4 @@
-package ar.edu.itba.amarseillan.nosql.domain;
+package ar.edu.itba.amarseillan.nosql.domain.response;
 
 public class Query2Response {
 	public double supp_acc_balance;

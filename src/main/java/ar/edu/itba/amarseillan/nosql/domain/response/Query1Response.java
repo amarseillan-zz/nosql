@@ -1,4 +1,4 @@
-package ar.edu.itba.amarseillan.nosql.domain;
+package ar.edu.itba.amarseillan.nosql.domain.response;
 
 import java.util.Map;
 

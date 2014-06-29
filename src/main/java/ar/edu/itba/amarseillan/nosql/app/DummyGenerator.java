@@ -31,18 +31,34 @@ public class DummyGenerator {
 			case 0:
 				res.line_status = "CAN";
 				res.return_flag = "R";
+				res.supp_nation = "uganda";
+				res.supp_region = "africa";
+				res.cus_nation = "uganda";
+				res.cus_region = "africa";
 				break;
 			case 1:
 				res.line_status = "APP";
 				res.return_flag = "N";
+				res.supp_nation = "argentina";
+				res.supp_region = "america";
+				res.cus_nation = "uganda";
+				res.cus_region = "africa";
 				break;
 			case 2:
 				res.line_status = "PEN";
 				res.return_flag = "R";
+				res.supp_nation = "egipt";
+				res.supp_region = "africa";
+				res.cus_nation = "uganda";
+				res.cus_region = "africa";
 				break;
 			case 3:
 				res.line_status = "CAN";
 				res.return_flag = "N";
+				res.supp_nation = "argentina";
+				res.supp_region = "america";
+				res.cus_nation = "argentina";
+				res.cus_region = "america";
 				break;
 		}
 		

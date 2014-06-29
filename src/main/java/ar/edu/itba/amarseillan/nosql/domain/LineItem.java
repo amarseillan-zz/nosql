@@ -23,18 +23,25 @@ public class LineItem {
 	public String ship_mode;
 	public String comment;
 
-
+	public String supp_nation;
+	public String supp_region;
+	
+	public String cus_nation;
+	public String cus_region;
+	
+	
 	@Override
 	public String toString() {
-		return "LineItem [_id=" + _id + ", lineNumber=" + line_number
-				+ ", quantity=" + quantity + ", extendedPrice=" + extended_price
-				+ ", discount=" + discount + ", tax=" + tax + ", returnFlag="
-				+ return_flag + ", lineStatus=" + line_status + ", shipDate="
-				+ ship_date + ", commitDate=" + commit_date + ", receiptDate="
-				+ receipt_date + ", shipInStruct=" + ship_in_struct
-				+ ", shipMode=" + ship_mode + ", comment=" + comment + "]";
+		return "LineItem [_id=" + _id + ", line_number=" + line_number
+				+ ", quantity=" + quantity + ", extended_price="
+				+ extended_price + ", discount=" + discount + ", tax=" + tax
+				+ ", return_flag=" + return_flag + ", line_status="
+				+ line_status + ", ship_date=" + ship_date + ", commit_date="
+				+ commit_date + ", receipt_date=" + receipt_date
+				+ ", ship_in_struct=" + ship_in_struct + ", ship_mode="
+				+ ship_mode + ", comment=" + comment + ", supp_nation="
+				+ supp_nation + ", supp_region=" + supp_region
+				+ ", cus_nation=" + cus_nation + ", cus_region=" + cus_region
+				+ "]";
 	}
-	
-	
-	
 }

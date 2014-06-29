@@ -1,4 +1,5 @@
-package ar.edu.itba.amarseillan.nosql.domain;
+package ar.edu.itba.amarseillan.nosql.domain.response;
+
 
 public class ObjectContainer {
 
