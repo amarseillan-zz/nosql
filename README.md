@@ -11,6 +11,8 @@ El diseño de la base de datos es el siguiente: Se poseen dos colecciones llamad
 
 La elección del diseño fue realizada tomando en cuenta las queries planteadas y la cardinalidad de cada tabla en sql. En algunos casos, se tomó en cuenta también si este elemento era propenso a cambio o no, para decidir si tenía sentido repetirlo en distintas colecciones o no. Se desnormalizaron casi todas las tablas llegando así a estos 2 documentos. Hay algunos campos que no se incluyeron ya que no se pedían en ninguna query (en un ambiente productivo los incluiríamos igual ya que no queremos perder información).
 
+Se utilizaron índices para fechas y otros campos claves a los que se le realiza un match o order al principio de la query.
+
 ##Programa
 Se utilizó [Jongo](jongo.org) para la conexión a la base de datos dado que facilita la lectura del código para las consultas de mongo.
 El programa se debe llamar con argumentos.
